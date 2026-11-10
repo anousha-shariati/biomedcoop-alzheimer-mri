@@ -23,7 +23,12 @@ The datasets are not included in this repository. They are publicly available fr
 * **BTMRI**: the brain tumour MRI dataset prepared by the BiomedCoOp authors ([Hugging Face: TahaKoleilat/BiomedCoOp](https://huggingface.co/datasets/TahaKoleilat/BiomedCoOp)), with their official split.
 * **Falah/Alzheimer_MRI**: [Hugging Face](https://huggingface.co/datasets/Falah/Alzheimer_MRI), 6,400 axial slices in four classes.
 * **OASIS-1** (Marcus et al., 2007): axial slices from [Kaggle: ninadaithal/imagesoasis](https://www.kaggle.com/datasets/ninadaithal/imagesoasis), the official table of participants with age and CDR from [Kaggle: jboysen/mri-and-alzheimers](https://www.kaggle.com/datasets/jboysen/mri-and-alzheimers), and the original volumes for the coronal slices from [oasis-brains.org](https://www.oasis-brains.org).
+  
+Data were provided by OASIS. OASIS-1: Cross-Sectional: Principal Investigators: D. Marcus, R. Buckner, J. Csernansky, J. Morris; P50 AG05681, P01 AG03991, P01 AG026276, R01 AG021910, P20 MH071616, U24 RR021382.
 
+## How to run
+
+Open a notebook in Google Colab with a T4 GPU and run all cells. Results are saved to `MyDrive/placement2` on Google Drive, and finished runs are skipped. Notebook 4 uses files saved by notebook 3, so run notebook 3 first. All experiments use the authors' code at commit [`23710b0`](https://github.com/HealthX-Lab/BiomedCoOp/tree/23710b0b867e8cb4a5ea95b0ccbaa5e35203db0d).
 
 ## Use of generative AI
 
