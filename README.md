@@ -15,15 +15,6 @@ The results are discussed in the final report. Each notebook is saved with its o
 | `03_BiomedCoOp_OASIS1.ipynb` | The main experiments on OASIS-1, split by participant. Three classes (CDR 0 / 0.5 / ≥ 1) and two classes (no dementia vs dementia). It covers the choice of class names and descriptions on the validation set, stronger text guidance, a zero-shot-initialised linear probe, robustness checks (more participants, age), the choice of slices, and a cross-validated estimate on all 200 participants. |
 | `04_BiomedCoOp_OASIS1_coronal.ipynb` | Repeats the main two-class experiments on coronal slices built from the original OASIS-1 volumes, for the same participants and split. |
 
-Notebook 4 reads files that notebook 3 saves, so notebook 3 has to be run first.
-
-## How to run
-
-* Open a notebook in Google Colab with a T4 GPU and run all cells. The notebooks mount Google Drive and save everything to `MyDrive/placement2` (`outputs` for run logs, `results` for tables and figures).
-* Finished runs are skipped, so after a disconnect all cells can be run again. Runs finished in an earlier session print "already done".
-* Notebook 3 downloads data from Kaggle. If Kaggle asks for a login, run `kagglehub.login()` once and paste your API token.
-* All experiments use the authors' code at commit [`23710b0`](https://github.com/HealthX-Lab/BiomedCoOp/tree/23710b0b867e8cb4a5ea95b0ccbaa5e35203db0d), with their settings. The new datasets and descriptions are added at run time, so the authors' files are not edited. The only change is one compatibility fix in Dassl: newer PyTorch versions no longer accept the `verbose` argument of its learning-rate scheduler, so it is removed (it is always `False`).
-* The package versions used are printed in the last cells of the notebooks (Python 3.13, PyTorch 2.11 and 2.14, `open_clip_torch` 2.23.0, `transformers` 4.35.2).
 
 ## Data
 
@@ -33,11 +24,6 @@ The datasets are not included in this repository. They are publicly available fr
 * **Falah/Alzheimer_MRI**: [Hugging Face](https://huggingface.co/datasets/Falah/Alzheimer_MRI), 6,400 axial slices in four classes.
 * **OASIS-1** (Marcus et al., 2007): axial slices from [Kaggle: ninadaithal/imagesoasis](https://www.kaggle.com/datasets/ninadaithal/imagesoasis), the official table of participants with age and CDR from [Kaggle: jboysen/mri-and-alzheimers](https://www.kaggle.com/datasets/jboysen/mri-and-alzheimers), and the original volumes for the coronal slices from [oasis-brains.org](https://www.oasis-brains.org).
 
-Data were provided by OASIS. OASIS-1: Cross-Sectional: Principal Investigators: D. Marcus, R. Buckner, J. Csernansky, J. Morris; P50 AG05681, P01 AG03991, P01 AG026276, R01 AG021910, P20 MH071616, U24 RR021382.
-
-## Records
-
-The full logs of every run, the K-shot samples, and the result tables and figures are kept in the project's Google Drive folder, with a copy on University OneDrive storage.
 
 ## Use of generative AI
 
